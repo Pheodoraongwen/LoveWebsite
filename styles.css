@@ -1,0 +1,228 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #111111 0%, #a6eea6 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  overflow-y: auto;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  animation: fadeIn 1s ease forwards;
+}
+
+p, li, a {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.login-container, .timeline, .notes, .gallery, .playlist, .letter, .quiz, .dream-board {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  max-width: 400px;
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
+
+
+input, button {
+  margin: 10px 0;
+  padding: 12px;
+  width: 80%;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: 0.3s ease;
+}
+
+button {
+  background: #7bd178;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #d7e0da;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+img {
+    max-width: 100%; /* Ensures the image doesn't exceed the container width */
+    height: auto;    /* Maintains the aspect ratio */
+    display: block;  /* Removes extra space below the image */
+    margin: 15px auto; /* Centers the image and adds spacing */
+    border-radius: 20px; /* Keeps the rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Keeps the shadow */
+}
+
+a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #77d674;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  background: #2575fc;
+  transform: translateY(-2px);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 12px 0;
+}
+
+.error-message {
+  color: rgb(218, 65, 95);
+  font-weight: bold;
+}
+
+iframe {
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.quiz-container {
+  max-width: 400px;
+  margin: 100px auto;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  font-family: 'Poppins', sans-serif;
+}
+
+.quiz-container input {
+  padding: 10px;
+  width: 80%;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  margin-top: 10px;
+}
+
+.quiz-container button {
+  padding: 10px 20px;
+  margin-top: 15px;
+  background: #6df59b;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.quiz-container button:hover {
+  background: #1f1d1e;
+}
+
+.next-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #a6c1ee;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+}
+
+.next-link:hover {
+  background: #789ff3;
+}
+
+
+.dream-board-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.dream-board-container h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #161114;
+}
+
+#dreamList {
+  list-style: none;
+  padding: 0;
+}
+
+#dreamList li {
+  background: #bfecd3;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#dreamList li:hover {
+  background: #181316;
+}
+
+.dream-input {
+  margin-top: 20px;
+}
+
+.dream-input input {
+  padding: 10px;
+  width: 70%;
+  border: 2px solid #1d1419;
+  border-radius: 10px;
+}
+
+.dream-input button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #a6c1ee;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dream-input button:hover {
+  background: #789ff3;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
