@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Dream Board 💭</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="dream-board-container">
+  <h1>✨ Dream Board ✨</h1>
+  <ul id="dreamList"></ul>
+
+  <div class="dream-input">
+    <input type="text" id="dreamInput" placeholder="Write your dream here...">
+    <button onclick="addDream()">Add Dream</button>
+    <a href="playlist.html">Next: 🎵🎶</a>
+  </div>
+</div>
+
+<script>
+  function loadDreams() {
+    const savedDreams = JSON.parse(localStorage.getItem("dreamBoard")) || [];
+    const dreamList = document.getElementById("dreamList");
+    dreamList.innerHTML = "";
+    savedDreams.forEach((dream, index) => {
+      const li = document.createElement("li");
+      li.textContent = dream;
+      li.onclick = () => removeDream(index);
+      dreamList.appendChild(li);
+    });
+  }
+
+  function addDream() {
+    const input = document.getElementById("dreamInput");
+    const newDream = input.value.trim();
+
+    if (newDream !== "") {
+      const savedDreams = JSON.parse(localStorage.getItem("dreamBoard")) || [];
+      savedDreams.push(newDream);
+      localStorage.setItem("dreamBoard", JSON.stringify(savedDreams));
+      input.value = "";
+      loadDreams();
+    }
+  }
+
+  function removeDream(index) {
+    const savedDreams = JSON.parse(localStorage.getItem("dreamBoard")) || [];
+    savedDreams.splice(index, 1);
+    localStorage.setItem("dreamBoard", JSON.stringify(savedDreams));
+    loadDreams();
+  }
+
+  loadDreams();
+</script>
+
+</body>
+</html>

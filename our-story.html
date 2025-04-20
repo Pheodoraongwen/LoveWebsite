@@ -1,0 +1,40 @@
+<!-- our-story.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story</title>
+<link rel="stylesheet" href="css/styles.css?v=1.0">
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+<div class="timeline">
+<h1>HAPPY BIRTHDAY!! 💕</h1>
+<ul>
+<p>Happy Birthday MZEE!!😂 May this be the first time you actually recognize that you are turning an year older. May God's favour stick with you in everything that you do and may you continue living life to your fullest!😘</p>
+</ul>
+<a href="love-notes.html">Next: 💌</a>
+</div>
+<script>
+    // Confetti burst when the page loads
+    window.onload = () => {
+      confetti({
+        particleCount: 150,
+        spread: 90,
+        origin: { y: 0.6 }
+      });
+  
+      // You can do another burst after a short delay!
+      setTimeout(() => {
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.3 }
+        });
+      }, 1000);
+    };
+  </script>
+  
+</body>
+</html>
